@@ -16,7 +16,7 @@ public class LoginApiTest2 {
 				baseUri("http://64.227.160.186:8080").
 				basePath("/api/auth").
 				header("Content-Type","application/json").
-				body("{\"username\": \"ansh\",\"password\": \"ansh1234\"}"). //username ansh/uday1234 : password ansh1234/uday12345
+				body("{\"username\": \"naruto123\",\"password\": \"naruto123\"}"). //username ansh/uday1234 : password ansh1234/uday12345
 				post("/login");
 		Assert.assertEquals(response.statusCode(), 200); 
 		response.prettyPrint();

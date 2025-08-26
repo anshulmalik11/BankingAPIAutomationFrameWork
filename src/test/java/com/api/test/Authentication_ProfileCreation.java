@@ -8,17 +8,17 @@ import com.api.model.request.SignUpRequest;
 
 import io.restassured.response.Response;
 
-public class AccountCreationTest {
+public class Authentication_ProfileCreation {
 
 	@Test
-	public void createAccountTest(){
+	public void createProfileTest(){
 		
 		SignUpRequest signUprequest = new SignUpRequest.Builder()
-		.userName("Disha123")
-		.email("disha@yahoo.com")
-		.firstName("Disha")
-		.password("disha123")
-		.lastName("Patani")
+		.userName("naruto123")
+		.email("naruto@yahoo.com")
+		.firstName("naruto")
+		.password("naruto123")
+		.lastName("uzumaki")
 		.mobileNumber("7777777776")
 		.build();
 		
@@ -27,6 +27,6 @@ public class AccountCreationTest {
 		
 		response.prettyPrint();
 		
-		Assert.assertEquals(response.statusCode(), 500);  //response should be 200 but due to server issue 500 is coming right now
+		Assert.assertEquals(response.statusCode(), 200); 
 	}
 }

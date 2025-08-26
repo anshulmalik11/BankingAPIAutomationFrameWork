@@ -85,9 +85,7 @@ public class SignUpRequest {
 		
 		public Builder userName(String username) {
 			this.username = username;
-			Builder x = new Builder();
-			return x;  // this means current object and object means new builder 
-//			return this;	better to write this
+			return this;
 		}
 		
 		public Builder password(String password) {

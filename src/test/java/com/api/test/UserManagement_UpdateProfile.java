@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.api.base.AuthService;
-import com.api.base.UserProfileManagmentService;
+import com.api.base.UserProfileManagment;
 import com.api.model.request.LoginRequest;
 import com.api.model.request.ProfileRequest;
 import com.api.model.response.LoginResponse;
@@ -12,7 +12,7 @@ import com.api.model.response.UserProfileResponse;
 
 import io.restassured.response.Response;
 
-public class UpdateProfileTest {
+public class UserManagement_UpdateProfile {
 
 	@Test
 	public void updateProfileTest() {
@@ -25,7 +25,7 @@ public class UpdateProfileTest {
 		System.out.println("----------------------------------------");
 		
 		
-		UserProfileManagmentService managmentService = new UserProfileManagmentService();
+		UserProfileManagment managmentService = new UserProfileManagment();
 		response = managmentService.getProfile(loginResponse.getToken());
 		response.prettyPrint();
 		UserProfileResponse userProfileResponse = response.as(UserProfileResponse.class);
